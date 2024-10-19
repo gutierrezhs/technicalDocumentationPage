@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <header>
+            <h1>CSS Documentation</h1>
+        </header>
+        <div class="nav-links">
+            <a class="nav-link" href="#CSS_Introduction">CSS Introduction</a>
+            <a class="nav-link" href="#CSS_Syntax">CSS Syntax</a>
+            <a class="nav-link" href="#CSS_Selectors">CSS Selectors</a>
+            <a class="nav-link" href="#How_to_add_CSS">How to add CSS</a>
+            <a class="nav-link" href="#CSS_Comments">CSS Comments</a>
+            <a class="nav-link" href="#CSS_Colors">CSS Colors</a>
+            <a class="nav-link" href="#CSS_Background_Color">CSS Background Color</a>
+            <a class="nav-link" href="#CSS_Borders">CSS Borders</a>
+            <a class="nav-link" href="#CSS_Margins">CSS Margins</a>
+            <a class="nav-link" href="#CSS_Paddings">CSS Paddings</a>
+        </div>
+    </nav>
+    <main id="main-doc">
+            <section class="main-section" id="CSS_Introduction">
+                <header class="header">
+                    <h2>CSS Introduction</h2>
+                </header>
+                <p>CSS is the language we use to style a Web page.</p>
+                <h3>What is CSS?</h3>
+                <ul>
+                    <li>CSS stands for Cascading Style Sheets</li>
+                    <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                    <li>External stylesheets are stored in CSS files</li>
+                </ul>
+
+            </section> <!-- .main-section -->
+
+            <section class="main-section" id="CSS_Syntax">
+                <header class="header">
+                    <h2>CSS Syntax</h2>
+                </header>
+                <p>A CSS rule consists of a selector and a declaration block.</p>
+                <h3>CSS Syntax</h3>
+                <ul>
+                    <li>The selector points to the HTML element you want to style.</li>
+                    <li>The declaration block contains one or more declarations separated by semicolons.</li>
+                    <li>Each declaration includes a CSS property name and a value, separated by a colon.</li>
+                    <li>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</li>
+                </ul>
+
+                <div>
+                    <h4>Example</h4>
+                    <p>In this example all "p" elements will be center-aligned, with a red text color:</p>
+                    <div class="code">
+                        <code>
+                            p {
+                                color: red;
+                                text-align: center;
+                              }
+                        </code>
+                    </div>
+                    <ul>
+                        <li><span>p</span> is a selector in CSS (it points to the HTML element you want to style: p)</li>
+                        <li> <span>color</span> is a property, and <span>red</span> is the property value</li>
+                        <li><span>text-align</span> is a property, and <span>center</span> is the property value</li>
+                    </ul>
+                </div>
+
+            </section> <!-- .main-section -->
+
+            <section class="main-section" id="CSS_Selectors">
+                <header class="header" >
+                    <h2>CSS Selectors</h2>
+                </header>
+                <p>A CSS selector selects the HTML element(s) you want to style.</p>
+                <h3>CSS Selectors</h3>
+                <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+                <p>We can divide CSS selectors into five categories:</p>
+
+                <ul>
+                    <li>Simple selectors (select elements based on name, id, class)</li>
+                    <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+                    <li>Pseudo-class selectors (select elements based on a certain state)</li>
+                    <li>Pseudo-elements selectors (select and style a part of an element)</li>
+                    <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+                </ul>
+
+                
+                <h3>The CSS Element Selector</h3>
+                <p>The element selector selects HTML elements based on the element name.</p>
+                <div>
+                    <h4>Example</h4>
+                    <p>Here, all "p" elements on the page will be center-aligned, with a red text color:</p>
+                    <div class="code">
+                        <code>
+                            p {
+                                text-align: center;
+                                color: red;
+                              }
+                        </code>
+                    </div>                 
+                </div>
+
+                <h3>The CSS id Selector</h3>
+                <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+                <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+                <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+                <div>
+                    <h4>Example</h4>
+                    <p>The CSS rule below will be applied to the HTML element with id="para1": </p>
+                    <div class="code">
+                        <code>
+                            #para1 {
+                                text-align: center;
+                                color: red;
+                              }
+                        </code>
+                    </div>                 
+                </div>
+
+                <h3>The CSS class Selector</h3>
+                <p>The class selector selects HTML elements with a specific class attribute.</p>
+                <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+             
+                <div>
+                    <h4>Example</h4>
+                    <p>In this example all HTML elements with class="center" will be red and center-aligned:  </p>
+                    <div class="code">
+                        <code>
+                            .center {
+                                text-align: center;
+                                color: red;
+                              }
+                              
+                        </code>
+                    </div>    
+                    
+                    <h3>The CSS Universal Selector</h3>
+                <p>The universal selector (*) selects all HTML elements on the page.</p>
+        
+                <div>
+                    <h4>Example</h4>
+                    <p>The CSS rule below will affect every HTML element on the page:   </p>
+                    <div class="code">
+                        <code>
+                            * {
+                                text-align: center;
+                                color: blue;
+                              }          
+                        </code>
+                    </div>    
+                </div>
+
+            </section> <!-- .main-section -->
+
+            <section class="main-section" id="How_to_add_CSS">
+                <header class="header" >
+                    <h2>How to add CSS</h2>
+                </header>
+                <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</p>
+                <h3>Three Ways to Insert CSS</h3>
+                <p>There are three ways of inserting a style sheet:</p>
+
+                <ul>
+                    <li>External CSS</li>
+                    <li>Internal CSS</li>
+                    <li>Inline CSS</li>
+                   
+                </ul>
+               
+                <h3>External CSS</h3>
+                <p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+                <p>Each HTML page must include a reference to the external style sheet file inside the "link" element, inside the head section.</p>
+                <div>
+                    <h4>Example</h4>
+                    <p>External styles are defined within the "link" element, inside the "head" section of an HTML page:</p>
+                    <div class="code">
+                        <code>
+                            
+                            
+                        </code>
+                    </div>                 
+                </div>
+                <p>An external style sheet can be written in any text editor, and must be saved with a .CSS extension.</p>
+
+                <p>The external .CSS file should not contain any HTML tags.</p>
+                    
+                <p>Here is how the "mystyle.CSS" file looks:</p>
+
+                <h3>Internal CSS</h3>
+                <p>An internal style sheet may be used if one single HTML page has a unique style.</p>
+                <p>The internal style is defined inside the "style" element, inside the "head" section. </p>
+                <div>
+                    <h4>Example</h4>
+                    <p>Internal styles are defined within the "style" element, inside the "head" section of an HTML page:e applied to the HTML element with id="para1": </p>
+                    <div class="code">
+                        <code>
+                            
+                        </code>
+                    </div>                 
+                </div>
+
+                <h3>Inline CSS</h3>
+                <p>An inline style may be used to apply a unique style for a single element.</p>
+                <p>To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+             
+                <div>
+                    <h4>Example</h4>
+                    <p>Inline styles are defined within the "style" attribute of the relevant element: </p>
+                    <div class="code">
+                        <code>
+                            
+                              
+                        </code>
+                    </div>    
+                       
+                </div>
+
+            </section> <!-- .main-section -->
+
+            <section class="main-section" id="CSS_Comments">
+                <header class="header" >
+                    <h2>CSS Comments</h2>
+                </header>
+                <p>CSS comments are not displayed in the browser, but they can help document your source code.</p>
+
+                <h3>CSS Comments</h3>
+                <p>Comments are used to explain the code, and may help when you edit the source code at a later date.</p>
+                <p>Comments are ignored by browsers.</p>
+                <p>A CSS comment is placed inside the "style" element, and starts with /* and ends with */:</p>
+
+                <div>
+                    <h4>Example</h4>
+                
+                    <div class="code">
+                        <code>
+                            /* This is a single-line comment */
+                            p {
+                            color: red;
+                            }                          
+                        </code>
+                    </div>    
+                    
+                    <p>Comments can also span multiple lines: </p>
+                    <div class="code">
+                        <code>
+                            /* This is
+                            a multi-line
+                            comment */
+
+                            p {
+                            color: red;
+                            }                        
+                        </code>
+                    </div>  
+
+                </div>
+
+                <h3>HTML and CSS Comments</h3>
+                <p>From the HTML tutorial, you learned that you can add comments to your HTML source by using the <!--...--> syntax.</p>
+                <p>In the following example, we use a combination of HTML and CSS comments: </p>
+                <div>
+                    <h4>Example</h4>
+                    <div class="code">
+                        <code>
+                            <span><</span><span>!</span><span>-</span><span>-</span> These paragraphs will be red <span>-</span><span>-</span><span>></span>
+                            
+                        </code>
+                    </div>                 
+                </div>
+
+            </section> <!-- .main-section -->
+
+            <section class="main-section" id="CSS_Colors">
+                <header class="header" >
+                    <h2>CSS Colors</h2>
+                </header>
+                <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
+
+                <h3>CSS Color Names</h3>
+                <p>In CSS, a color can be specified by using a predefined color name:</p>
+                <ul>
+                    <li>Tomato</li>
+                    <li>Orange</li>
+                    <li>DodgerBlue</li>
+                    <li>MediumSeaGreen</li>
+                    <li>Gray</li>
+                    <li>SlateBlue</li>
+                </ul>
+                <p>CSS/HTML support 140 standard color names.</p>
+        
+            </div>
+            </section> <!-- .main-section -->
+
+            <section class="main-section" id="CSS_Background_Color">
+                <header>
+                    <h3 id="background">CSS Background Color</h3>
+                </header>
+                <p>You can set the background color for HTML elements</p>
+
+                <div>
+                 <h4>Example</h4>
+                    <div class="code">
+                      <code>
+                        <span><</span><span>h1</span><span> style="background-color:DodgerBlue;</span><span>></span> Hello World <span><span><</span><span>/h1</span>><span>
+                        
+                     </code>
+                </div>         
+            </div>
+            
+            </section> <!-- .main-section -->
+
+            <section class="main-section" id="CSS_Borders">
+                <header>
+                    <h3 id="borders">CSS Borders</h3>
+                </header>
+                <p>The CSS border properties allow you to specify the style, width, and color of an element's border.</p>
+
+                <div>
+                 <h4>Example</h4>
+                    <div class="code">
+                      <code>
+                        p.dotted {border-style: dotted;} <br>
+                        p.dashed {border-style: dashed;}<br>
+                        p.solid {border-style: solid;}<br>
+                        p.double {border-style: double;}<br>
+                        p.groove {border-style: groove;}<br>
+                        p.ridge {border-style: ridge;}<br>
+                        p.inset {border-style: inset;}<br>
+                        p.outset {border-style: outset;}<br>
+                        p.none {border-style: none;}<br>
+                        p.hidden {border-style: hidden;}<br>
+                        p.mix {border-style: dotted dashed solid double;}                      
+                     </code>
+                </div>   
+        
+            </div>          
+
+            </section> <!-- .main-section -->
+
+            <section class="main-section" id="CSS_Margins">
+                <header>
+                    <h3 id="margins">CSS Margins</h3>
+                </header>
+                <p>Margins are used to create space around elements, outside of any defined borders.</p>
+                <p>The CSS margin properties are used to create space around elements, outside of any defined borders.</p>
+                <p>With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).</p>
+
+                <p>With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</p>
+                <p>CSS has properties for specifying the margin for each side of an element:</p>
+                <ul>
+                    <li>margin-top</li>
+                    <li>margin-right</li>
+                    <li>margin-bottom</li>
+                    <li>margin-left</li>
+                </ul>
+
+                <div>
+                 <h4>Example</h4>
+                    <div class="code">
+                      <code>
+                        p {
+                            margin-top: 100px;
+                            margin-bottom: 100px;
+                            margin-right: 150px;
+                            margin-left: 80px;
+                          }                  
+                     </code>
+                </div>   
+        
+            </div>
+
+            </section> <!-- .main-section -->
+
+            <section class="main-section" id="CSS_Paddings">
+                <header>
+                    <h3 id="paddings">CSS Paddings</h3>
+                </header>
+                <p>Padding is used to create space around an element's content, inside of any defined borders.</p>
+                <p>The CSS padding properties are used to generate space around an element's content, inside of any defined borders.</p>
+                <p>With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</p>
+                <p>CSS has properties for specifying the padding for each side of an element:</p>
+                <ul>
+                    <li>padding-top</li>
+                    <li>padding-right</li>
+                    <li>padding-bottom</li>
+                    <li>padding-left</li>
+                </ul>
+
+                <div>
+                 <h4>Example</h4>
+                    <div class="code">
+                      <code>
+                        p {
+                            margin-top: 100px;
+                            margin-bottom: 100px;
+                            margin-right: 150px;
+                            margin-left: 80px;
+                          }                  
+                     </code>
+                </div>   
+        
+            </div>
+
+            </section> <!-- .main-section -->
+
+    </main>
+
+</body>
+</html> 
